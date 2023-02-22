@@ -16,18 +16,15 @@ public class Hooks extends Env{
         WebDriverManager.chromedriver().setup();
         ChromeOptions opt = new ChromeOptions();
         opt.setHeadless(false);
-        // Sett google profile
-        opt.addArguments("--user-data-dir=C:\\Users\\cahya\\AppData\\Local\\Google\\Chrome\\User Data");
-        opt.addArguments("--profile-directory=Profile 1");
         driver = new ChromeDriver(opt);
         // Get To Url
-        driver.get("https://staging.cicle.app/");
+        driver.get("https://javan.co.id/");
         // maximize screen & close driver in 10 seconds if there is an issue
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
     @After
     public void after(){
-    driver.quit();
+//    driver.quit();
     }
 }
